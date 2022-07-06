@@ -1,0 +1,111 @@
+
+/* Selecionando todos os elementos */
+* {
+  margin: 0;
+  padding: 0;
+
+  /* Mudado a referência para medir o tamanho da caixa, o padrão é medir pelo conteúdo, border-box vai medir o tamanho à partir da borda */
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+
+}
+
+html {
+  --bg-color: #edf2ff;
+  --text-color: #00082F;
+  --link-color: #FFFFFF;
+  --primary-color: #4263eb;
+  --secund-color: #364fd7;
+}
+
+
+body.dark {
+  --bg-color: #00082F;
+  --text-color: #edf2ff;
+}
+
+body {
+  background: var(--bg-color);
+  color: var(--text-color);
+  font-family: 'Roboto', sans-serif;
+}
+
+.conteiner { 
+  /* Alinha todos os textos que estão dentro dessa caixa ao centro*/
+  text-align: center; 
+
+  width: 300px; 
+  
+  /* Alinhamento Horizontal */
+  /* utilizando o margin auto para as laterais a caixa fica alinhada ao centro */
+  margin: 60px auto; 
+}
+
+
+img.avatar {
+   /* Isso vai fazer a imagem ter uma largura de 100% da largura do PAI, rlatievo à caixa que ela está!*/
+  /* width: 100%; */
+
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  border: 4px solid var(--primary-color);
+  padding: 3.7px;
+}
+
+h1{ 
+  margin-top: 24px;
+  margin-bottom: 8px;
+  font-size: 32px;
+}
+
+.username {
+  font-family: 'Roboto Mono', monospace;
+  opacity: 0.7;
+  font-size: 18px;
+}
+
+ul {
+  list-style: none;
+  margin: 48px 0;
+}
+
+ul li a{
+  /* display: block;  Define que a caixa vai ocupar a linha 'inteira' */
+
+
+  /* display: flex; Define que a caixa vai ocupar a linha inteira e permite colocar, por exemplo, alihas os elentos ao da caixa */
+  display: flex;
+  align-items: center; /* Alinha os elementos ao centro da linha, só é possível por causa do display: flex*/
+  justify-content: center; /* Alinha o conteúdo centro da caixa, na horizontal*/
+
+  height: 53px;
+  background: var(--primary-color);
+  color: var(--link-color);
+  text-transform: uppercase;
+  font-size: 14px;
+
+  margin-bottom: 16px;
+  border-radius: 6px;
+
+  transition: background 400ms;
+}
+
+ul li a:hover {
+  background: var(--secund-color);
+}
+
+footer {
+  font-weight: 500;
+  font-size: 12px;
+  color: var(--text-color);
+  opacity: 0.6;
+
+  transition: opacity 400ms;
+}
+
+footer:hover {
+  opacity: 1;
+}
